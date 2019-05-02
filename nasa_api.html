@@ -8,13 +8,11 @@
 	<h1>NASA Consumed Information </h1>
 	<p><b>Date: </b><p id="date_n"></p></p>
 	<p><b>Explanation: </b><p id="exp"></p></p>
-	<p><b>Image: </b></p><img id="image" width="50%" src="https://apod.nasa.gov/apod/image/1904/M33Meteor_Chokshi_2000.jpg">
-	<p><b>Image URL: </b><p id="img_url"></p></p>
+	<p><b>Image: </b></p><img id="image" width="50%">
 	<p><b>Media Type: </b><p id="media_type"></p></p>
 	<p><b>Service Version: </b><p id="service"></p></p>
 	<p><b>Title: </b><p id="title"></p></p>
-	<p><b>Second Image: </b></p><img id="image" width="50%" src="https://apod.nasa.gov/apod/image/1904/M33Meteor_Chokshi_960.jpg">
-	<p><b>Second Image URL: </b><p id="img2_url"></p></p>
+	
 
 		<script type="text/javascript">
 			
@@ -38,11 +36,11 @@
 			{
 				document.getElementById('date_n').innerHTML = data.date;
 				document.getElementById('exp').innerHTML = data.explanation;
-				document.getElementById('img_url').innerHTML = data.hdurl;
+				document.getElementById('image').src = data.hdurl;
 				document.getElementById('media_type').innerHTML = data.media_type;
 				document.getElementById('service').innerHTML = data.service_version;
 				document.getElementById('title').innerHTML = data.title;
-				document.getElementById('img2_url').innerHTML = data.url;
+			
 
 			}
 
